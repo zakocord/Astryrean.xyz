@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Astryrean.xyz | Offcial Website</title>
+  <title>Astryrean - Official Website</title>
   <style>
     body {
       margin: 0;
@@ -67,22 +67,21 @@
       margin-bottom: 20px;
     }
 
-    /* Image container settings */
-    .image-container {
-      position: relative;
-      width: 100%;
-      height: 400px;
-      display: flex;
-      justify-content: center;
-      align-items: center;
+    .github-button {
+      display: inline-block;
+      padding: 15px 25px;
+      background-color: #24292f;
+      color: #ffffff;
+      font-size: 1.2em;
+      text-decoration: none;
+      border-radius: 5px;
+      margin-top: 30px;
+      transition: background-color 0.3s;
     }
 
-    #tilt-image {
-      width: 30%;
-      transition: transform 0.1s ease;
-      object-fit: contain;
+    .github-button:hover {
+      background-color: #6a00f4;
     }
-
   </style>
 </head>
 <body>
@@ -90,32 +89,21 @@
   <!-- Header -->
   <header>
     <h1>Astryrean</h1>
-    <h3>Open-source & Easy-to-use Stealer<h3>
-    <p>A minimal, powerful tool designed for research and educational purposes.<p>
+    <p>Powerful, open-source builder for custom tools and automation</p>
   </header>
 
-  <script>
-    const image = document.getElementById('tilt-image');
-    const container = document.getElementById('image-container');
-
-    container.addEventListener('mousemove', (e) => {
-      const rect = container.getBoundingClientRect();
-      const x = e.clientX - rect.left;
-      const y = e.clientY - rect.top;
-      const centerX = rect.width / 2;
-      const centerY = rect.height / 2;
-      const rotateX = ((y - centerY) / centerY) * -10;
-      const rotateY = ((x - centerX) / centerX) * 10;
-      image.style.transform = `rotateX(${rotateX}deg) rotateY(${rotateY}deg)`;
-    });
-
-    container.addEventListener('mouseleave', () => {
-      image.style.transform = 'rotateX(0) rotateY(0)';
-    });
-  </script>
-
+  <!-- GitHub Access Button -->
   <section>
-    <h2>🛠 Features</h2>
+    <div style="text-align: center;">
+      <a href="https://github.com/zakocord/Astryrean" class="github-button" target="_blank">
+        Access on GitHub
+      </a>
+    </div>
+  </section>
+
+  <!-- Features Section -->
+  <section>
+    <h2>Features</h2>
     <div class="features">
       <div class="feature">
         <h3>Customizable</h3>
@@ -136,6 +124,7 @@
     </div>
   </section>
 
+  <!-- Showcase Video Section -->
   <section id="showcase">
     <h2>Showcase</h2>
     <div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; max-width: 90%; margin: 0 auto; border-radius: 12px;">
@@ -148,6 +137,7 @@
     </div>
   </section>
 
+  <!-- Footer -->
   <footer>
     © 2025 Astryrean. All rights reserved.
   </footer>
